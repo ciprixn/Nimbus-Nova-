@@ -154,3 +154,19 @@ By bridging the gap between human bio-mechanics and robotics, **Nimbus Nova** is
 <p center="align">
   <i>Developed with ❤️ by Team Nimbus Nova for the 2026 24-Hour Hackathon.</i>
 </p>
+
+---
+
+## BioSignal AI (hackathon)
+
+Real-time EMG + heart-rate telemetry for an ESP32 wearable suit.
+
+- [mobile-app/](./mobile-app) — React Native (Expo SDK 52) app: live EMG oscilloscope (Skia + Reanimated 60fps), AI Form Guard with camera overlay, telemetry recorder with JSON/CSV export. BLE (Nordic UART) / WebSocket transports with a built-in mock signal generator.
+  - 
+pm install then 
+px expo start (Demo mode works out of the box)
+  - Android APK: eas build -p android --profile preview
+- [web-demo/](./web-demo) — React 18 + Vite web demo: same synthetic EMG engine, canvas oscilloscope, webcam form guard, JSON/CSV export.
+  - 
+pm install then 
+pm run dev -> http://localhost:5173

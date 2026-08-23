@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "BioSignal AI",
+    "slug": "biosignal-ai",
+    "version": "1.0.0",
+    "scheme": "biosignal",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#020617",
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "BioSignal AI connects to your ESP32 suit to stream EMG and heart-rate telemetry.",
+        "NSCameraUsageDescription": "BioSignal AI uses the camera to analyze workout form."
+      }
+    },
+    "android": {
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_CONNECT",
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.ciprixn.biosignalai"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to scan workout posture for live form feedback."
+        }
+      ],
+      "expo-asset"
+    ],
+    "experiments": {
+      "newArchEnabled": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bd2df898-866b-47c3-97e8-8122949d1709"
+      }
+    },
+    "owner": "ciprixn"
+  }
+}
