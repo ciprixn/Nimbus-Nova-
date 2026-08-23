@@ -22,3 +22,4 @@ Phone on same network: open `http://<pc-ip>:5173`.
   JSON session bundle & CSV export via browser download
 
 Camera requires HTTPS or localhost per browser policy.
+<img width="1600" height="830" alt="image" src="https://github.com/user-attachments/assets/ed695f1a-f457-4605-ab15-3858940e5523" />
