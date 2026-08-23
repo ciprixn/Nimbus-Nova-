@@ -35,7 +35,7 @@ export function Nav() {
             />
           </svg>
           <span className="text-[13px] font-bold tracking-[0.3em] text-slate-100">
-            BIOSIGNAL<span className="text-bio-emerald"> AI</span>
+            NIMBUS<span className="text-bio-emerald"> NOVA</span>
           </span>
         </a>
 

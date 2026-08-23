@@ -8,7 +8,7 @@ import react from "@vitejs/plugin-react";
 const NVIDIA_ENDPOINT = "https://integrate.api.nvidia.com/v1/chat/completions";
 
 const SYSTEM_PROMPT =
-  "You are the BioSignal AI assistant. BioSignal AI is a 24-hour hackathon project: " +
+  "You are the Nimbus Nova assistant. Nimbus Nova is a 24-hour hackathon project: " +
   "an ESP32 wearable suit streams 4-channel EMG (normalized 0-100 %MVC) and PPG heart rate " +
   "at 10Hz over BLE Nordic UART or WebSocket into React Native / React apps that render live " +
   "biomechanical feedback, camera-based form coaching with injury-risk zones (<35% under-activation, " +

@@ -50,7 +50,7 @@ export function DashboardScreen() {
       >
         <View>
           <Text className="text-[11px] font-bold tracking-[0.35em] text-emerald-400">
-            BIOSIGNAL AI
+            Nimbus Nova
           </Text>
           <Text className="mt-1 font-mono text-[10px] text-slate-500">
             ESP32 WEARABLE SUIT · TELEMETRY CORE

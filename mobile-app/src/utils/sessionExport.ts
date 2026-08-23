@@ -15,7 +15,7 @@ export interface SessionMeta {
 }
 
 const buildSession = (meta: SessionMeta, frames: EmgFrame[]) => ({
-  format: "biosignal-ai/session@1",
+  format: "nimbus-nova/session@1",
   meta: {
     ...meta,
     startedAtIso: new Date(meta.startedAt).toISOString(),

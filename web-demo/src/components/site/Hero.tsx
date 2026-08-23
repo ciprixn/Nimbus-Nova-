@@ -31,7 +31,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-slate-400">
-            BioSignal AI streams EMG and heart-rate telemetry from an ESP32 wearable suit,
+            Nimbus Nova streams EMG and heart-rate telemetry from an ESP32 wearable suit,
             coaches your workout form with live injury-risk zones, and logs high-frequency
             movement data to train the next generation of mobility exoskeletons.
           </p>

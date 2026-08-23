@@ -8,7 +8,7 @@ interface Msg {
 const GREETING: Msg = {
   role: "assistant",
   content:
-    "Hey! I'm the BioSignal assistant. Ask me about the ESP32 suit, the EMG protocol, form-guard zones, or the ML data pipeline.",
+    "Hey! I'm the Nimbus Nova assistant. Ask me about the ESP32 suit, the EMG protocol, form-guard zones, or the ML data pipeline.",
 };
 
 export function Chatbot() {
@@ -65,7 +65,7 @@ export function Chatbot() {
                 </svg>
               </span>
               <div>
-                <div className="text-xs font-bold tracking-widest text-slate-100">BIOSIGNAL ASSISTANT</div>
+                <div className="text-xs font-bold tracking-widest text-slate-100">Nimbus Nova assistant</div>
                 <div className="text-[9px] tracking-wider text-slate-500">powered by NVIDIA NIM</div>
               </div>
             </div>

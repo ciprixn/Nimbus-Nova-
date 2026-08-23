@@ -1,4 +1,4 @@
-# 🧬 BioSignal AI — EMG-Powered Biomechanical Intelligence & Exoskeleton Training System
+# 🧬 Nimbus Nova — EMG-Powered Biomechanical Intelligence & Exoskeleton Training System
 
 > **Hackathon Theme:** *"Signals That Shape Our World"*  
 > Developed for a 24-Hour Hackathon by **Team Nimbus Nova**
@@ -16,7 +16,7 @@
 
 Every movement of the human body begins with an invisible signal: **electromyographic (EMG) bio-electrical pulses** emitted by neurons to contract muscle fibers. 
 
-**BioSignal AI** is an end-to-end wearable hardware and mobile solution that intercepts these micro-volt signals in real time using an ESP32-powered sensor suit. By translating raw bio-signals into actionable intelligence, BioSignal AI serves two revolutionary purposes:
+**Nimbus Nova** is an end-to-end wearable hardware and mobile solution that intercepts these micro-volt signals in real time using an ESP32-powered sensor suit. By translating raw bio-signals into actionable intelligence, Nimbus Nova serves two revolutionary purposes:
 
 1. **Immediate Personal Health & Workout Optimization:** Prevents sports injuries, detects muscle over-exertion / under-activation, measures real calorie consumption based on actual muscular effort, and guides exercise posture using camera sensor fusion.
 2. **AI-Driven Exoskeleton Mobility Models:** Logs high-frequency kinematic and muscular telemetry to train Machine Learning models. These models learn natural gait dynamics to drive next-generation physical rehabilitation exoskeletons for individuals with motor impairments.
@@ -78,7 +78,7 @@ Every movement of the human body begins with an invisible signal: **electromyogr
                              (Bluetooth LE / WebSockets)
                                          ▼
                     ┌─────────────────────────────────────────┐
-                    │      BioSignal AI Mobile App           │
+                    │      Nimbus Nova Mobile App           │
                     │       (React Native + Expo)             │
                     └──────────────────┬──────────────────────┘
                                        │
@@ -157,7 +157,7 @@ By bridging the gap between human bio-mechanics and robotics, **Nimbus Nova** is
 
 ---
 
-## BioSignal AI (hackathon)
+## Nimbus Nova (hackathon)
 
 Real-time EMG + heart-rate telemetry for an ESP32 wearable suit.
 

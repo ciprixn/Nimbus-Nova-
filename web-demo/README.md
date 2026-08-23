@@ -1,6 +1,6 @@
-# BioSignal AI — Web Demo
+# Nimbus Nova — Web Demo
 
-Browser version of the BioSignal AI pitch demo (React 18 + Vite + TypeScript + Tailwind).
+Browser version of the Nimbus Nova pitch demo (React 18 + Vite + TypeScript + Tailwind).
 Same synthetic EMG engine as the mobile app: fatigue wave + rep rhythm + spikes +
 burst holds at 10Hz, scrolling canvas oscilloscope with interpolated offset.
 

@@ -231,7 +231,7 @@ export function Footer() {
             <path d="M4 18h6l3-8 5 14 3-6h7" stroke="#34D399" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
           <span className="text-xs font-bold tracking-[0.3em] text-slate-300">
-            BIOSIGNAL<span className="text-emerald-400"> AI</span>
+            NIMBUS<span className="text-emerald-400"> NOVA</span>
           </span>
         </div>
         <p className="text-[11px] tracking-wide text-slate-600">

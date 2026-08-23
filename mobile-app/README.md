@@ -1,4 +1,4 @@
-# BioSignal AI
+# Nimbus Nova
 
 Real-time EMG + heart-rate telemetry for an ESP32 wearable suit. Live biomechanical
 feedback, workout form guard with camera overlay, and high-frequency data logging

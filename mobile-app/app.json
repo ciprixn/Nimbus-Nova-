@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "BioSignal AI",
+    "name": "Nimbus Nova",
     "slug": "biosignal-ai",
     "version": "1.0.0",
     "scheme": "biosignal",
@@ -10,8 +10,8 @@
     "ios": {
       "supportsTablet": false,
       "infoPlist": {
-        "NSBluetoothAlwaysUsageDescription": "BioSignal AI connects to your ESP32 suit to stream EMG and heart-rate telemetry.",
-        "NSCameraUsageDescription": "BioSignal AI uses the camera to analyze workout form."
+        "NSBluetoothAlwaysUsageDescription": "Nimbus Nova connects to your ESP32 suit to stream EMG and heart-rate telemetry.",
+        "NSCameraUsageDescription": "Nimbus Nova uses the camera to analyze workout form."
       }
     },
     "android": {
