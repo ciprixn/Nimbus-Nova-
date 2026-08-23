@@ -100,3 +100,8 @@ E:62.4,H:118
    camera for the full pitch visual.
 3. Record ~30s of telemetry, export CSV, show the file in Numbers/Excel for the
    "training data pipeline" slide.
+<img width="945" height="2048" alt="image" src="https://github.com/user-attachments/assets/d8408f97-be2c-4c63-a3ca-88e5909dc487" />
+<img width="945" height="2048" alt="image" src="https://github.com/user-attachments/assets/03104f2e-cc17-4ce9-be06-861cb95790e4" />
+<img width="945" height="2048" alt="image" src="https://github.com/user-attachments/assets/744ed6fb-c9f4-4ac5-b948-26427f130cc6" />
+
+
