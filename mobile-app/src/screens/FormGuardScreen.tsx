@@ -91,6 +91,8 @@ export function FormGuardScreen() {
         className="border-[3px] border-red-500"
       />
 
+      <ViewfinderOverlay />
+
       <SafeAreaView className="flex-1" edges={["top", "bottom"]}>
         <View className="flex-row items-start justify-between px-4 pt-3">
           <View>
@@ -150,14 +152,43 @@ export function FormGuardScreen() {
   );
 }
 
+function ViewfinderOverlay() {
+  const scan = useSharedValue(0);
+
+  useEffect(() => {
+    scan.value = withRepeat(withTiming(1, { duration: 2400 }), -1);
+  }, [scan]);
+
+  const scanStyle = useAnimatedStyle(() => ({
+    top: `${10 + scan.value * 80}%`,
+    opacity: 0.55 * Math.sin(Math.PI * scan.value)
+  }));
+
+  return (
+    <View pointerEvents="none" className="absolute inset-0">
+      {[
+        "left-4 top-24 border-l-2 border-t-2",
+        "right-4 top-24 border-r-2 border-t-2",
+        "left-4 bottom-40 border-b-2 border-l-2",
+        "right-4 bottom-40 border-b-2 border-r-2"
+      ].map((cls) => (
+        <View key={cls} className={`absolute h-10 w-10 rounded-md border-emerald-400/70 ${cls}`} />
+      ))}
+      <Animated.View
+        style={scanStyle}
+        className="absolute inset-x-8 h-[2px] rounded-full bg-emerald-400/70"
+      />
+    </View>
+  );
+}
+
 function Centered({
   text,
   action
 }: {
   text: string;
   action?: { label: string; onPress: () => void };
-}) {
-  return (
+}) {  return (
     <View className="flex-1 items-center justify-center gap-4 bg-bio-void px-8">
       <Text className="text-center text-sm leading-5 text-slate-400">{text}</Text>
       {action ? (
