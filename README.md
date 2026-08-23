@@ -1,183 +1,192 @@
-# 🧬 Nimbus Nova — EMG-Powered Biomechanical Intelligence & Exoskeleton Training System
+# 🧬 Nimbus Nova – EMG‑Powered Biomechanical Intelligence & Exoskeleton Training System
 
-> **Hackathon Theme:** *"Signals That Shape Our World"*  
-> Developed for a 24-Hour Hackathon by **Team Nimbus Nova**
+> **Hackathon theme:** *“Signals That Shape Our World”*  
+> **Built in 24 h** by **Team Nimbus Nova** – 2026 24‑hour Hackathon
 
----
-
-[![React Native](https://img.shields.io/badge/React_Native-Expo-61DAFB?style=for-the-badge&logo=react)](https://reactnative.dev/)
-[![Hardware](https://img.shields.io/badge/Hardware-ESP32_%7C_EMG_Sensors-red?style=for-the-badge&logo=espressif)](https://www.espressif.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Build](https://img.shields.io/badge/Hackathon-24h_MVP-orange?style=for-the-badge)]()
+![React Native](https://img.shields.io/badge/React_Native-Expo-61DAFB?style=for-the-badge&logo=react)
+![Hardware](https://img.shields.io/badge/Hardware-ESP32_%7C_EMG_Sensors-E73827?style=for-the-badge&logo=espressif)
+![License](https://img.shields.io/badge/License-MIT-0A7D2C?style=for-the-badge)
+![Hackathon](https://img.shields.io/badge/Hackathon-24h_MVP-FF7F00?style=for-the-badge)
 
 ---
 
 ## 📌 Executive Summary
 
-Every movement of the human body begins with an invisible signal: **electromyographic (EMG) bio-electrical pulses** emitted by neurons to contract muscle fibers. 
+Every voluntary movement starts with an invisible **electromyographic (EMG) bio‑electrical pulse** that travels from neuron to muscle fiber. **Nimbus Nova** captures those micro‑volt signals in real time with an ESP32‑based sensor suit and turns them into actionable intelligence for two high‑impact use‑cases:
 
-**Nimbus Nova** is an end-to-end wearable hardware and mobile solution that intercepts these micro-volt signals in real time using an ESP32-powered sensor suit. By translating raw bio-signals into actionable intelligence, Nimbus Nova serves two revolutionary purposes:
+| # | Goal | What Nimbus Nova delivers |
+|---|------|---------------------------|
+| **1️⃣ Personal Health & Workout** | Prevent injury, maximise gains, track true calories | Live EMG oscilloscope, real‑time strain gauge, form‑guard camera overlay, injury‑risk alerts, on‑device calorie model |
+| **2️⃣ AI‑Driven Exoskeleton Training** | Teach robots how humans really move | High‑frequency telemetry logger (EMG + HR + gait), one‑tap JSON/CSV export, stride‑consistency scoring, ready‑to‑train LSTM/Transformer datasets |
 
-1. **Immediate Personal Health & Workout Optimization:** Prevents sports injuries, detects muscle over-exertion / under-activation, measures real calorie consumption based on actual muscular effort, and guides exercise posture using camera sensor fusion.
-2. **AI-Driven Exoskeleton Mobility Models:** Logs high-frequency kinematic and muscular telemetry to train Machine Learning models. These models learn natural gait dynamics to drive next-generation physical rehabilitation exoskeletons for individuals with motor impairments.
+> **Demo‑ready out of the box** – a built‑in **Mock Signal Generator** streams synthetic EMG/HR so the app works instantly without any hardware.
 
 ---
 
-## 👥 Team Nimbus Nova
+## 👥 Team Nimbus Nova
 
-| Member | Role / Contribution |
-| :--- | :--- |
-| **Șelaru Bogdan** | Team Lead & Embedded Systems (ESP32 / EMG Firmware) |
-| **Radu Ciprian** | Mobile App Developer (React Native / UI Architecture) |
-| **Vladislav Barbaros** | Data Pipeline & Machine Learning / Signal Processing |
-| **Cezar Manea** | Hardware Engineering & Sensor Calibration / Testing |
+| Member | Role / Focus |
+|--------|--------------|
+| **Șelaru Bogdan** | Team Lead & Embedded Systems (ESP32 firmware, EMG firmware) |
+| **Radu Ciprian** | Mobile App (React Native / Expo, UI architecture, Skia + Reanimated) |
+| **Vladislav Barbaros** | Data Pipeline & ML (signal processing, LSTM/Transformer pipelines) |
+| **Cezar Manea** | Hardware Engineering (PCB layout, sensor calibration, BLE/Wi‑Fi stack) |
 
 ---
 
 ## 🚀 Key Features
 
-### 1. 📈 Real-Time EMG Telemetry Stream
-- High-rate analog signal sampling from surface EMG sensors positioned over key muscle groups (e.g., biceps, quadriceps, gastrocnemius).
-- Live Bluetooth Low Energy (BLE) / WebSocket telemetry streaming directly into the React Native mobile dashboard.
-- Digital filtering & signal smoothing algorithm (Moving RMS / Bandpass filter) built directly into the ESP32 micro-controller.
-
-### 2. ⚡ Muscle Contraction & Workout Guard
-- **Visual Strain Gauge:** Live visual response indicating muscle activation intensity (0 – 100%).
-- **Form Guard & Exertion Alerts:**
-  - 🟢 **Optimal Zone (35% – 80%):** Peak activation for maximum strength/hypertrophy gains.
-  - 🟡 **Under-Activation (< 35%):** Prompts user to squeeze harder or adjust posture.
-  - 🔴 **Over-Exertion (> 85%):** Audio-visual warning to prevent muscle tears or tendon strain.
-
-### 3. 📷 Camera-Enhanced Form Correction
-- Combines live video feed with bio-signal intensity to verify exercise posture.
-- Correlates peak joint angles with peak EMG contraction spikes to ensure exercises are executed safely and effectively.
-
-### 4. 🦿 Exoskeleton Training Telemetry Collector
-- Dedicated session recorder logging high-frequency gait dynamics, pulse rate, and contraction spikes.
-- Exports structured telemetry datasets (`.json` / `.csv`) formatted specifically for offline Neural Network training (LSTM / Transformer models) predicting natural human movement intent.
-
-### 5. 🎛️ Hackathon Demo Mode (Built-in Mock Generator)
-- Includes a dedicated **Mock Data Switch** inside the app. If hardware sensors are disconnected during demonstrations, the app automatically emits real-time synthetic bio-signals for seamless presentation.
+| # | Feature | Highlights |
+|---|---------|------------|
+| **1️⃣ Real‑Time EMG Telemetry** | 4‑channel surface EMG @ 10 Hz, BLE (Nordic UART) & WebSocket, on‑board RMS / band‑pass filtering on ESP32 |
+| **2️⃣ Muscle‑Contraction & Workout Guard** | • Live visual strain gauge (0‑100 %) <br>• **Green** Optimal 35‑80 % <br>• **Yellow** Under‑activation < 35 % <br>• **Red** Over‑exertion > 85 % <br>• Audio + visual alerts |
+| **3️⃣ Camera‑Enhanced Form Guard** | Fuses live camera feed with EMG peaks → verifies joint angles vs. contraction spikes |
+| **4️⃣ Exoskeleton Training Collector** | One‑tap session recorder → JSON/CSV export, stride‑consistency score, ready‑to‑train LSTM/Transformer format |
+| **5️⃣ Hackathon Demo Mode** | Built‑in mock generator (synthetic EMG + HR + burst patterns) – works instantly in Expo Go without any board |
 
 ---
 
 ## 🏗️ System Architecture
 
 ```
-                                  [ HUMAN BODY ]
-                                         │
-                             (Bio-electrical Signals)
-                                         ▼
-                            [ Surface EMG Sensors ]
-                                         │
-                                  (Analog Voltage)
-                                         ▼
-                      [ ESP32 Wearable Microcontroller ]
-                     └─ Moving Average / RMS Filtering
-                                         │
-                             (Bluetooth LE / WebSockets)
-                                         ▼
-                    ┌─────────────────────────────────────────┐
-                    │      Nimbus Nova Mobile App           │
-                    │       (React Native + Expo)             │
-                    └──────────────────┬──────────────────────┘
-                                       │
-            ┌──────────────────────────┴──────────────────────────┐
-            ▼                                                     ▼
- [ Real-Time User Feedback ]                          [ AI Exoskeleton Pipeline ]
-  • Live Contraction Waveform                          • Telemetry Data Logging
-  • Form & Injury Warnings                             • Stride & Intent Modeling
-  • Real-Time Calorie Calculation                      • Exoskeleton Control Export
+[ Human Body ] ──(EMG/HR)──▶ [ EMG Sensors ] ──▶ [ ESP32 Wearable ]
+                                                    │
+                         ┌────────────────────────┴─────────────────────┐
+                         ▼                                               ▼
+               [ Nimbus Nova Mobile App ]                         [ AI Exoskeleton Pipeline ]
+               (React Native + Expo)                               (Python / PyTorch)
+                • Live waveform (Skia 60 fps)        • Session logger (JSON/CSV)
+                • Strain gauge & alerts                • Stride‑consistency scoring
+                • Camera form guard                    • LSTM / Transformer datasets
+                • Mock / BLE / WebSocket switch        • Model export (ONNX / TFLite)
 ```
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠 Technology Stack
 
-- **Mobile Application:** React Native, Expo, TypeScript, TailwindCSS / NativeWind
-- **Data Visualization & Animations:** Victory Native / Reanimated / Skia
-- **Hardware Components:** ESP32 Microcontroller, MyoWare / Analog EMG Bio-Sensors, Electrodes, LiPo Power Management
-- **Hardware Protocols:** Bluetooth Low Energy (BLE) GATT profile, WebSockets, Serial UART
-- **Data Processing & ML:** Python (NumPy, SciPy, PyTorch) for signal processing & gesture classification
+| Layer | Stack |
+|-------|-------|
+| **Mobile** | React Native 0.76, Expo SDK 52, TypeScript, NativeWind (Tailwind CSS) |
+| **Graphics / Motion** | `@shopify/react-native-skia` (60 fps waveform), `react-native-reanimated 3` |
+| **Hardware** | ESP32‑S3, MyoWare‑style analog EMG front‑ends, LiPo + TP4056 charger, 3‑D‑printed sensor housing |
+| **Wireless** | BLE 5 (Nordic UART Service `6E400001‑B5A3‑F393‑E0A9‑E50E24DCCA9E`), WebSocket (`ws://192.168.4.1:81/`) |
+| **Firmware** | ESP‑IDF / Arduino, on‑chip RMS & band‑pass (0.5‑150 Hz) |
+| **Data / ML** | Python 3.11, NumPy, SciPy, PyTorch 2, ONNX export, Optuna hyper‑opt |
 
 ---
 
-## 📥 Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v18.x or later)
-- npm or yarn
-- Expo Go app installed on your Android/iOS device (or Android Studio / Xcode simulators)
+| Tool | Minimum |
+|------|---------|
+| Node.js | 18.x (LTS) |
+| npm / yarn | ≥ 9 |
+| Expo Go (Android / iOS) | latest |
+| Android Studio / Xcode (optional) | for native builds |
 
-### Installation & Setup
+### 1️⃣ Clone & Install
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/nimbus-nova/biosignal-ai.git
-   cd biosignal-ai
-   ```
+```bash
+git clone https://github.com/ciprixn/Nimbus-Nova-.git
+cd Nimbus-Nova-
 
-2. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
+# Mobile app
+cd mobile-app
+npm ci               # clean install
+npx expo start       # → scan QR with Expo Go (Demo mode works out of the box)
 
-3. **Launch Development Server:**
-   ```bash
-   npx expo start
-   ```
+# Web demo (separate terminal)
+cd ../web-demo
+npm ci
+npm run dev          # → http://localhost:5173
+```
 
-4. **Run on Device:**
-   Scan the QR code printed in the terminal using the **Expo Go** application (Android) or **Camera app** (iOS).
+### 2️⃣ Hardware (optional – for real signals)
 
----
+| Step | Action |
+|------|--------|
+| **1. Wire EMG front‑ends** | Connect EMG front‑end outputs to ESP32 GPIOs 36 (VP) & 39 (VN) |
+| **2. Flash firmware** | `cd hardware/esp32_firmware && idf.py flash monitor` (or Arduino IDE) |
+| **3. Power & pair** | Power the suit → app auto‑discovers BLE peripheral `NimbusSuit` |
+| **4. Demo mode** | In the app header tap **“Demo / Mock”** to enable synthetic signals (no board needed) |
 
-## 🔌 Hardware Setup (ESP32)
-
-1. Connect the analog signal pins of your EMG sensors to GPIO `A0` / `VP` (36) on the ESP32.
-2. Flash the microcontroller firmware located in the `/hardware/esp32_firmware` directory using Arduino IDE or PlatformIO.
-3. Power on the ESP32 board. The mobile app will auto-discover the BLE peripheral named `BioSignal_ESP32`.
-
-> **Note for Hackathon Evaluators:** No physical board? Enable **"Demo / Mock Data"** mode via the top status bar toggle inside the app to simulate incoming live signals instantly.
-
----
-
-## 🎯 Pitch & Theme Alignment
-
-Our project aligns directly with the theme **"Signals That Shape Our World"** by demonstrating how invisible biological signals can be captured, deciphered, and repurposed. 
-
-By bridging the gap between human bio-mechanics and robotics, **Nimbus Nova** is laying the foundation for a future where personal wellness is powered by bio-feedback, and mobility impairments are overcome through adaptive AI exoskeletons.
+> **Hackathon tip:** the app starts in **Demo mode** by default – you can demo the full UI on any phone without a single wire.
 
 ---
 
-<p center="align">
-  <i>Developed with ❤️ by Team Nimbus Nova for the 2026 24-Hour Hackathon.</i>
+## 🤖 AI Chatbot (Web Demo)
+
+The web demo embeds a floating assistant powered by **NVIDIA NIM** (Llama‑3.1‑8B‑Instruct). The API key never leaves the server – a tiny Vite middleware proxies `/api/chat`.
+
+```bash
+cd web-demo
+cp .env.example .env          # create local env
+# edit .env → NVIDIA_API_KEY=your_key
+npm run dev                   # or: npm run build && npm run preview
+```
+
+---
+
+## 📂 Repository Layout
+
+```
+Nimbus-Nova-/
+├── mobile-app/          # Expo (React Native) – main hackathon deliverable
+│   ├── src/
+│   │   ├── components/  # Skia waveform, MuscleMap, ChannelBars, Gauge …
+│   │   ├── screens/     # Dashboard, FormGuard, DataLab
+│   │   ├── hooks/       # useEMGData, useRecorder, useReveal …
+│   │   ├── services/    # BLE, WebSocket, Mock generator, SensorService
+│   │   └── state/       # SensorProvider (React Context)
+│   ├── app.json, eas.json, package.json
+│   └── ...
+├── web-demo/            # Vite + React 18 landing + live demo
+│   ├── src/
+│   │   ├── components/site/   # Hero, Features, HowItWorks, Spec, Ticker, Chatbot
+│   │   ├── engine/            # Synthetic EMG engine (identical math to mobile)
+│   │   └── hooks/
+│   ├── index.html, vite.config.ts, tailwind.config.js
+│   └── ...
+├── hardware/            # ESP32 firmware (PlatformIO / ESP‑IDF)
+│   └── esp32_firmware/
+├── .github/workflows/   # EAS build, lint, type‑check
+├── .env.example         # NVIDIA_API_KEY template (never commit real key!)
+├── LICENSE              # MIT
+└── README.md
+```
+
+---
+
+## 🤝 Contributing
+
+1. **Fork** the repo → create a feature branch (`feat/…` or `fix/…`).
+2. Run `npm run lint && npm run typecheck` (both projects).
+3. Open a **Pull Request** with a clear description + screenshots / videos for UI changes.
+
+> **Code‑style:** TypeScript strict, ESLint + Prettier, Conventional Commits (`feat:`, `fix:`, `chore:`).
+
+---
+
+## 📜 License
+
+MIT – see [`LICENSE`](LICENSE).
+
+---
+
+## 🙏 Acknowledgements
+
+- **Espressif** for the ESP32 platform & BLE stack  
+- **Expo & NativeWind teams** for the delightful RN + Tailwind DX  
+- **Shopify** for `@shopify/react-native-skia` (silky 60 fps graphics)  
+- **NVIDIA** for the free NIM inference endpoint (Llama‑3.1‑8B)  
+- All open‑source libraries that made a 24‑h build possible  
+
+---
+
+<p align="center">
+  <i>Built with ❤️ by Team Nimbus Nova for the 2026 24‑Hour Hackathon.</i><br>
+  <b>“Signals That Shape Our World”</b>
 </p>
-
----
-
-## Nimbus Nova (hackathon)
-
-Real-time EMG + heart-rate telemetry for an ESP32 wearable suit.
-
-- [mobile-app/](./mobile-app) — React Native (Expo SDK 52) app: live EMG oscilloscope (Skia + Reanimated 60fps), AI Form Guard with camera overlay, telemetry recorder with JSON/CSV export. BLE (Nordic UART) / WebSocket transports with a built-in mock signal generator.
-  - 
-pm install then 
-px expo start (Demo mode works out of the box)
-  - Android APK: eas build -p android --profile preview
-- [web-demo/](./web-demo) — React 18 + Vite web demo: same synthetic EMG engine, canvas oscilloscope, webcam form guard, JSON/CSV export.
-  - 
-pm install then 
-pm run dev -> http://localhost:5173
-
-### AI Chatbot (web-demo)
-
-The site ships with a floating assistant powered by NVIDIA NIM. The key is read
-server-side only via a Vite middleware proxy (\/api/chat\) and never bundled to the client.
-
-1. \cd web-demo && cp .env.example .env\
-2. Set \NVIDIA_API_KEY=\ in \.env\
-3. \
-pm run dev\ (or \
-pm run build && npm run preview\)
