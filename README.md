@@ -170,3 +170,14 @@ px expo start (Demo mode works out of the box)
   - 
 pm install then 
 pm run dev -> http://localhost:5173
+
+### AI Chatbot (web-demo)
+
+The site ships with a floating assistant powered by NVIDIA NIM. The key is read
+server-side only via a Vite middleware proxy (\/api/chat\) and never bundled to the client.
+
+1. \cd web-demo && cp .env.example .env\
+2. Set \NVIDIA_API_KEY=\ in \.env\
+3. \
+pm run dev\ (or \
+pm run build && npm run preview\)

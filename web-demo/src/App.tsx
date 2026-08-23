@@ -1,6 +1,7 @@
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Features, Footer, HardwareSpec, HowItWorks } from "@/components/site/Sections";
+import { Chatbot } from "@/components/site/Chatbot";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <HardwareSpec />
       </main>
       <Footer />
+      <Chatbot />
     </div>
   );
 }
