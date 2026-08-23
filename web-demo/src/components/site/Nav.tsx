@@ -1,3 +1,4 @@
+import { Pulse, GithubLogo } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 
 const LINKS = [
@@ -21,20 +22,12 @@ export function Nav() {
         scrolled ? "border-b border-slate-800/80 bg-bio-void/85 backdrop-blur-md" : ""
       }`}
     >
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-2">
-          <svg viewBox="0 0 32 32" width="26" height="26">
-            <rect width="32" height="32" rx="7" fill="#0B1220" stroke="#1E293B" />
-            <path
-              d="M4 18h6l3-8 5 14 3-6h7"
-              stroke="#34D399"
-              strokeWidth="2.5"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <span className="text-[13px] font-bold tracking-[0.3em] text-slate-100">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-slate-800 bg-bio-panel">
+            <Pulse size={15} color="#34D399" weight="bold" />
+          </span>
+          <span className="text-[13px] font-bold tracking-[0.25em] text-slate-100">
             NIMBUS<span className="text-bio-emerald"> NOVA</span>
           </span>
         </a>
@@ -53,9 +46,10 @@ export function Nav() {
             href="https://github.com/ciprixn/Nimbus-Nova-"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg border border-emerald-400/50 bg-emerald-400/10 px-4 py-1.5 text-xs font-bold tracking-widest text-emerald-300 transition-all hover:bg-emerald-400/20 hover:shadow-[0_0_18px_rgba(52,211,153,0.35)]"
+            className="flex items-center gap-1.5 rounded-lg border border-slate-700 bg-bio-panel/60 px-3.5 py-1.5 text-xs font-bold tracking-wider text-slate-200 transition-colors hover:border-slate-500 active:scale-[0.98]"
           >
-            GITHUB
+            <GithubLogo size={14} weight="fill" />
+            GITHUB ↗
           </a>
         </nav>
       </div>

@@ -1,6 +1,8 @@
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
-import { Features, Footer, HardwareSpec, HowItWorks } from "@/components/site/Sections";
+import { Ticker } from "@/components/site/Ticker";
+import { Features } from "@/components/site/Features";
+import { HowItWorks, HardwareSpec } from "@/components/site/Spec";
 import { Chatbot } from "@/components/site/Chatbot";
 
 export default function App() {
@@ -9,6 +11,7 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Ticker />
         <Features />
         <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
         <HowItWorks />
@@ -18,5 +21,28 @@ export default function App() {
       <Footer />
       <Chatbot />
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-slate-800/80 py-10">
+      <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6 text-center">
+        <span className="text-xs font-bold tracking-[0.3em] text-slate-300">
+          NIMBUS<span className="text-bio-emerald"> NOVA</span>
+        </span>
+        <p className="text-[11px] tracking-wide text-slate-600">
+          Built in 24 hours · React Native + Expo · Skia · Reanimated · Vite
+        </p>
+        <a
+          href="https://github.com/ciprixn/Nimbus-Nova-"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[11px] font-semibold tracking-widest text-emerald-400/80 transition-colors hover:text-emerald-300"
+        >
+          GITHUB ↗
+        </a>
+      </div>
+    </footer>
   );
 }
