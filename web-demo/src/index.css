@@ -11,18 +11,6 @@ body,
   min-height: 100%;
 }
 
-@keyframes tickerScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-
-
 ::selection {
   background: rgba(52, 211, 153, 0.3);
 }
-
