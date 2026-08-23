@@ -4,6 +4,7 @@ import path from "node:path";
 
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 
 const NVIDIA_ENDPOINT = "https://integrate.api.nvidia.com/v1/chat/completions";
 
@@ -102,7 +103,35 @@ function nvidiaChatProxy(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), nvidiaChatProxy()],
+  plugins: [
+    react(),
+    nvidiaChatProxy(),
+    VitePWA({
+      registerType: "autoUpdate",
+      includeAssets: ["favicon.ico", "robots.txt"],
+      manifest: {
+        name: "Nimbus Nova",
+        short_name: "Nimbus Nova",
+        description: "EMG-powered biomechanical intelligence & exoskeleton training system",
+        theme_color: "#09090B",
+        background_color: "#09090B",
+        display: "standalone",
+        start_url: "/",
+        scope: "/",
+        icons: [
+          {
+            src: "/logo.svg",
+            sizes: "any",
+            type: "image/svg+xml",
+            purpose: "any maskable"
+          }
+        ]
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,html,ico,png,svg,woff2,woff,json}"]
+      }
+    })
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
