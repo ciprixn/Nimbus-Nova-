@@ -4,18 +4,19 @@ import { Ticker } from "@/components/site/Ticker";
 import { Features } from "@/components/site/Features";
 import { HowItWorks, HardwareSpec } from "@/components/site/Spec";
 import { Chatbot } from "@/components/site/Chatbot";
+import { Logo } from "@/components/site/Logo";
 
 export default function App() {
   return (
-    <div className="min-h-full bg-bio-void text-slate-200">
+    <div className="min-h-full bg-bio-void text-zinc-200 font-sans antialiased">
       <Nav />
       <main>
         <Hero />
         <Ticker />
         <Features />
-        <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+        <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
         <HowItWorks />
-        <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+        <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
         <HardwareSpec />
       </main>
       <Footer />
@@ -26,12 +27,15 @@ export default function App() {
 
 function Footer() {
   return (
-    <footer className="border-t border-slate-800/80 py-10">
+    <footer className="border-t border-zinc-800/80 py-10">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6 text-center">
-        <span className="text-xs font-bold tracking-[0.3em] text-slate-300">
-          NIMBUS<span className="text-bio-emerald"> NOVA</span>
+        <span className="flex items-center gap-2 text-zinc-300">
+          <Logo size={22} />
+          <span className="text-xs font-bold tracking-[0.3em]">
+            NIMBUS<span className="text-bio-emerald"> NOVA</span>
+          </span>
         </span>
-        <p className="text-[11px] tracking-wide text-slate-600">
+        <p className="text-[11px] tracking-wide text-zinc-600">
           Built in 24 hours · React Native + Expo · Skia · Reanimated · Vite
         </p>
         <a

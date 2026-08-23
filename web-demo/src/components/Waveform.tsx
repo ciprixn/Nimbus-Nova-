@@ -9,7 +9,7 @@ interface Props {
 }
 
 const COLORS = {
-  grid: "#1E293B",
+  grid: "#27272A",
   amber: "#FBBF24",
   red: "#F87171",
   emerald: "#34D399",
@@ -144,7 +144,7 @@ export function Waveform({ height = 220, capacity = 240 }: Props) {
   return (
     <div ref={wrapRef} className="relative overflow-hidden rounded-xl" style={{ height }}>
       <canvas ref={canvasRef} />
-      <span className="absolute left-3 top-2 text-[10px] font-semibold tracking-[0.2em] text-slate-500">
+      <span className="absolute left-3 top-2 text-[10px] font-semibold tracking-[0.2em] text-zinc-500">
         EMG %
       </span>
     </div>

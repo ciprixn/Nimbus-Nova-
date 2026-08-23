@@ -56,8 +56,8 @@ export function Chatbot() {
   return (
     <div className="fixed bottom-5 right-5 z-[60] flex flex-col items-end gap-3">
       {open && (
-        <div className="flex h-[440px] w-[min(92vw,360px)] flex-col overflow-hidden rounded-2xl border border-slate-700/80 bg-bio-panel/95 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-md">
-          <div className="flex items-center justify-between border-b border-slate-800 px-4 py-3">
+        <div className="flex h-[440px] w-[min(92vw,360px)] flex-col overflow-hidden rounded-2xl border border-zinc-700/80 bg-bio-panel/95 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-md">
+          <div className="flex items-center justify-between border-b border-zinc-800 px-4 py-3">
             <div className="flex items-center gap-2">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg border border-emerald-400/30 bg-emerald-400/10">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#34D399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -65,13 +65,13 @@ export function Chatbot() {
                 </svg>
               </span>
               <div>
-                <div className="text-xs font-bold tracking-widest text-slate-100">Nimbus Nova assistant</div>
-                <div className="text-[9px] tracking-wider text-slate-500">powered by NVIDIA NIM</div>
+                <div className="text-xs font-bold tracking-widest text-zinc-100">Nimbus Nova assistant</div>
+                <div className="text-[9px] tracking-wider text-zinc-500">powered by NVIDIA NIM</div>
               </div>
             </div>
             <button
               onClick={() => setOpen(false)}
-              className="text-slate-500 transition-colors hover:text-slate-200"
+              className="text-zinc-500 transition-colors hover:text-zinc-200"
               aria-label="Close chat"
             >
               ✕
@@ -95,13 +95,13 @@ export function Chatbot() {
             )}
           </div>
 
-          <div className="flex gap-2 border-t border-slate-800 p-3">
+          <div className="flex gap-2 border-t border-zinc-800 p-3">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && send()}
               placeholder="Ask about the project..."
-              className="min-w-0 flex-1 rounded-xl border border-slate-700 bg-slate-950/80 px-3 py-2 text-xs text-slate-200 outline-none transition-colors placeholder:text-slate-600 focus:border-emerald-400/50"
+              className="min-w-0 flex-1 rounded-xl border border-zinc-700 bg-zinc-950/80 px-3 py-2 text-xs text-zinc-200 outline-none transition-colors placeholder:text-zinc-600 focus:border-emerald-400/50"
             />
             <button
               onClick={send}
@@ -144,7 +144,7 @@ function Bubble({ role, content }: Msg) {
         className={`max-w-[85%] whitespace-pre-wrap rounded-2xl px-3.5 py-2.5 text-xs leading-relaxed ${
           isUser
             ? "rounded-br-md border border-emerald-400/25 bg-emerald-400/10 text-emerald-100"
-            : "rounded-bl-md border border-slate-700/70 bg-slate-900/80 text-slate-300"
+            : "rounded-bl-md border border-zinc-700/70 bg-zinc-900/80 text-zinc-300"
         }`}
       >
         {content}

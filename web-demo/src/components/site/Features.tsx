@@ -15,7 +15,7 @@ function Reveal({ children, className = "" }: { children: ReactNode; className?:
     <div
       ref={ref}
       className={`transition-all duration-700 ease-out ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        visible ? "tranzinc-y-0 opacity-100" : "tranzinc-y-5 opacity-0"
       } ${className}`}
     >
       {children}
@@ -33,16 +33,16 @@ const ICON_PROPS = {
 
 export function Features() {
   return (
-    <section id="features" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="features" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-20">
       <Reveal>
-        <h2 className="max-w-xl text-2xl font-bold tracking-tight text-slate-50 sm:text-3xl">
+        <h2 className="max-w-xl text-2xl font-bold tracking-tight text-zinc-50 sm:text-3xl">
           A biomechanics lab, condensed into one suit.
         </h2>
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <div className="rounded-2xl border border-emerald-400/20 bg-gradient-to-b from-emerald-400/[0.07] to-transparent p-5 md:col-span-2">
             <FeatureHead icon={<Pulse {...ICON_PROPS} />} title="Live Biomechanical Feedback" />
-            <p className="mt-2 max-w-[58ch] text-[13px] leading-relaxed text-slate-500">
+            <p className="mt-2 max-w-[58ch] text-[13px] leading-relaxed text-zinc-500">
               Scrolling oscilloscope, per-channel spectrum and an animated muscle-map HUD,
               rendered on-device at a silky 60fps.
             </p>
@@ -69,13 +69,13 @@ export function Features() {
             body="One tap exports versioned JSON sessions or flat CSV tables, shaped for ML ingestion."
           />
 
-          <div className="rounded-2xl border border-slate-800 bg-black/50 p-5 lg:bg-black/70">
+          <div className="rounded-2xl border border-zinc-800 bg-black/50 p-5 lg:bg-black/70">
             <FeatureHead icon={<Broadcast {...ICON_PROPS} />} title="Dual Transport" />
-            <p className="mt-2 text-[13px] leading-relaxed text-slate-500">
+            <p className="mt-2 text-[13px] leading-relaxed text-zinc-500">
               Stream straight off the ESP32 — scan-and-pair over BLE or raw WebSocket with
               auto-reconnect.
             </p>
-            <pre className="mt-4 overflow-x-auto rounded-lg bg-bio-panel/80 p-3 font-mono text-[11px] leading-5 text-slate-400">
+            <pre className="mt-4 overflow-x-auto rounded-lg bg-bio-panel/80 p-3 font-mono text-[11px] leading-5 text-zinc-400">
 {`ws://192.168.4.1:81/
 E:62.4,H:118`}
             </pre>
@@ -92,7 +92,7 @@ function FeatureHead({ icon, title }: { icon: ReactNode; title: string }) {
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-emerald-400/25 bg-emerald-400/10">
         {icon}
       </span>
-      <h3 className="text-sm font-bold tracking-wide text-slate-100">{title}</h3>
+      <h3 className="text-sm font-bold tracking-wide text-zinc-100">{title}</h3>
     </div>
   );
 }
@@ -107,9 +107,9 @@ function FeatureCell({
   body: string;
 }) {
   return (
-    <div className="rounded-2xl border border-slate-800 bg-bio-panel/60 p-5 transition-colors duration-300 hover:border-slate-600">
+    <div className="rounded-2xl border border-zinc-800 bg-bio-panel/60 p-5 transition-colors duration-300 hover:border-zinc-600">
       <FeatureHead icon={icon} title={title} />
-      <p className="mt-2 text-[13px] leading-relaxed text-slate-500">{body}</p>
+      <p className="mt-2 text-[13px] leading-relaxed text-zinc-500">{body}</p>
     </div>
   );
 }

@@ -9,15 +9,14 @@ export default {
       },
       colors: {
         bio: {
-          void: "#020617",
-          panel: "#0B1220",
-          line: "#1E293B",
+          void: "#09090B",
+          panel: "#101012",
+          line: "#232326",
           emerald: "#34D399",
-          cyan: "#22D3EE",
-          amber: "#FBBF24",
-          red: "#F87171",
           rose: "#FB7185",
+          amber: "#FBBF24",
         },
+      },
       },
       animation: {
         "pulse-dot": "pulseDot 1.4s ease-in-out infinite",

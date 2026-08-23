@@ -11,10 +11,6 @@ body,
   min-height: 100%;
 }
 
-body {
-  @apply bg-bio-void font-sans text-slate-200 antialiased;
-}
-
 @keyframes tickerScroll {
   from {
     transform: translateX(0);
@@ -46,9 +42,9 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #09090b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #27272a;
   border-radius: 4px;
 }

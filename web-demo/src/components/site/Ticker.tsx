@@ -22,7 +22,7 @@ export function Ticker() {
   const items = [...live, ...STATIC_ITEMS];
 
   return (
-    <div className="overflow-hidden border-y border-slate-800/80 bg-bio-panel/40 py-3">
+    <div className="overflow-hidden border-y border-zinc-800/80 bg-bio-panel/40 py-3">
       <div
         className="flex w-max gap-10 whitespace-nowrap"
         style={{ animation: "tickerScroll 36s linear infinite" }}
@@ -30,7 +30,7 @@ export function Ticker() {
         {[0, 1].map((copy) => (
           <div key={copy} className="flex gap-10" aria-hidden={copy === 1}>
             {items.map((item, i) => (
-              <span key={`${copy}-${i}`} className="flex items-center gap-10 font-mono text-[11px] tracking-[0.18em] text-slate-500">
+              <span key={`${copy}-${i}`} className="flex items-center gap-10 font-mono text-[11px] tracking-[0.18em] text-zinc-500">
                 {item}
                 <span className="h-1 w-1 rounded-full bg-emerald-400/50" />
               </span>
