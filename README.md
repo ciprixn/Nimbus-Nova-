@@ -1,4 +1,4 @@
-# 🧬 Nimbus Nova – EMG‑Powered Biomechanical Intelligence & Exoskeleton Training System
+# 🧬 Nimbus Nova – EMG‑Powered Biomechanical Intelligence & Exoskeleton Training System:
 
 > **Hackathon theme:** *“Signals That Shape Our World”*  
 > **Built in 24 h** by **Team Nimbus Nova** – 2026 24‑hour Hackathon
